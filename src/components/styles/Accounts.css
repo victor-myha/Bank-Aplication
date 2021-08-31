@@ -4,7 +4,6 @@
     font-family: 'Poppins', sans-serif;
     flex-direction: column;
     display: flex;
-    margin-left: 33px;
 }
 
 .accountsTitle {
@@ -16,8 +15,11 @@
     letter-spacing: 0.37px;
     margin-top: 49.65px;
     margin-bottom: 20.35px;
+    margin-left: 33px;
 }
-
+.accountsList{
+    margin-left: 33px;
+}
 .AccountCard {
     width: 448px;
     height: 70px;
@@ -30,12 +32,15 @@
     letter-spacing: 0.37px;
     font-weight: bolder;
 }
-.dote{
+
+.dote {
     margin-right: 19px;
 }
+
 .AccountCard:hover {
     cursor: pointer;
 }
+
 .AccountCard img {
     margin-right: 7px;
 }
@@ -51,4 +56,28 @@
     background: linear-gradient(180deg, #FD3A6C 0%, #F5855C 100%);
     box-shadow: 0px 0px 7px #EE4874;
     border-radius: 20px;
+}
+
+.footerWrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 205px;
+    border: 1px solid #DADADA;
+    box-sizing: border-box;
+    border-radius: 40px 0px 0px 0px;
+}
+.footerContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 33px;
+    margin-bottom: 10px;
+}
+.cardRequestImg{
+    margin-right: 17px;
+}
+.rightArrow:hover{
+cursor: pointer;
 }

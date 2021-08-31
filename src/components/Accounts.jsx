@@ -28,11 +28,10 @@ const Accounts = (props) => {
     <div className='accountsTitle'>Your accounts</div>
 
     <div className="d-flex">
-      <div className='accountsList'>
-      {/* <div className={selectedAccount === item ? 'selected' : 'AccountCard'} key={item.uniqueId} onClick={() => setAccountItem(item)}> */}
+      <div>
         {
           accountsData.map((item, index) => {
-            return <div>
+            return <div className='accountsList'>
               {
                 selectedAccount === item
                   ? <section id='selected' className="d-flex align-items-center mb-4">
@@ -66,11 +65,32 @@ const Accounts = (props) => {
             </div>
           })
         }
-        <div className='accountsFooter'>
-          <Card >
-            <Card.Body>€ £ $ ₩ Request a card</Card.Body>
-          </Card>
-        </div>
+        <section className='footerWrapper'>
+          <div className='footerContent'>
+              <div className='d-flex align-items-center'>
+                <div className='cardRequestImg'><img src={require('../img/CardRequest.svg').default} alt="" /></div>
+                
+                <div>
+                  <h4>Request a card</h4>
+                  <h6 className='text-muted'>Get a debit card for free</h6>
+                </div>
+              </div>
+              <div className='rightArrow'><img src={require('../img/RightArrow.png').default} alt="" /></div>
+          </div>
+
+          <div className='footerContent'>
+              <div className='d-flex align-items-center'>
+                <div className='cardRequestImg'><img src={require('../img/CardRequest.svg').default} alt="" /></div>
+                
+                <div>
+                  <h4>Request a card</h4>
+                  <h6 className='text-muted'>Get a debit card for free</h6>
+                </div>
+              </div>
+              <div className='rightArrow'><img src={require('../img/RightArrow.png').default} alt="" /></div>
+          </div>
+        </section>
+
       </div>
       <div className="accountLayer">
         {
