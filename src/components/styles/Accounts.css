@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.AccountsWrapper {
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    display: flex;
+    margin-left: 33px;
+}
+
+.accountsTitle {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.37px;
+    margin-top: 49.65px;
+    margin-bottom: 20.35px;
+}
+
+.AccountCard {
+    width: 448px;
+    height: 70px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 22, 5px;
+    letter-spacing: 0.37px;
+    font-weight: bolder;
+}
+
+.CardBody {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+}

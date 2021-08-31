@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import styles from './styles/AccountsInfo.module.css'
 
@@ -9,8 +10,7 @@ const AccountInfo = (props) => {
         { props.accountItem && 
            props.accountItem.title
         }
-
-        <NavLink to='/sendMoney'><button>Send Money</button></NavLink>
+        <NavLink to='/sendMoney'><Button variant="outline-danger">Send Money</Button></NavLink>
     </div>)
 }
 

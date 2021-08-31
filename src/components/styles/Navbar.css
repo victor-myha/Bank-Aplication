@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.NavbarWrapper{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    border-right: 1px solid #DADADA;
+}
+.NavbarWrapper a{
+    text-decoration: none;
+    font-size: 16px;
+    
+    letter-spacing: 0.37px;
+}
+.NavbarWrapper a:hover{
+   color: #FD3A6C;
+   font-weight: bold;
+}
+.NavbarWrapper a img{
+    margin-right: 12px;
+}
+.navItem{
+    margin-top: 32.5px;
+}
+.logoWrapper{
+    width: 38.86px;
+    height: 25.91px;
+    margin-left: 33px;
+    margin-top: 40px;
+}
+.logoWrapper img{
+    width: 100%;
+    height: 100%;
+}
+.navPanel{
+    color: #262626;
+    margin-top: 45px;
+    margin-left: 33px;
+}
+.Active{
+    color: #FD3A6C;
+   
+}
+.Active img{
+    /* background-color:red ; */
+}
+.Disabled{
+    color: #262626;
+}
+.profileImg{
+    width: 23px;
+    height: 23px;
+    margin-left: 26px;
+    margin-right: 8px;
+}
+.navProfileWrap{
+    margin-bottom: 26.42px;
+}

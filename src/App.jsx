@@ -1,13 +1,16 @@
-import './components/styles/App.css';
+import React from 'react';
 import Accounts from './components/Accounts';
 import AccountInfo from './components/AccountInfo';
 import Navbar from './components/Navbar';
 import { Redirect, Route } from 'react-router-dom';
 import SendMoney from './components/SendMoney';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/styles/App.css';
 
 const  App = () => {
   return (
     <div>
+      <div className="figureCircle"/>
       <Route exact path="/">
         <Redirect to="/home" />
       </Route>

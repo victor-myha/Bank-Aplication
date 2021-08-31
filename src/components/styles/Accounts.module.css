@@ -1,9 +1,0 @@
-.AccountsWrapper{
-    background-color: rgb(251, 255, 0);
-    display: flex;
-    justify-content: center;
-}
-.AccountCard{
-    /* width: 300px; */
-    border: 1px solid;
-}

@@ -1,18 +1,28 @@
-*{
-  margin: 0;
-  padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
-.appLayout{
+.figureCircle{
+    position: fixed;
+    z-index: -5;
+    width: 100vw;
+    height: 100vh;
+    clip-path: circle(80% at 50% 50%);
+    background: radial-gradient(circle, rgba(255, 196, 204, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+.appLayout {
     display: flex;
-    justify-content: center;
     width: 100vw;
 }
-.navbarLayout{
-    width: 10%;
+
+.navbarLayout {
+    width: 212px;
 }
-.accountsLayout{
+
+.accountsLayout {
     width: 45%;
 }
-.accountsInfoLayout{
+
+.accountsInfoLayout {
     width: 45%;
 }
