@@ -8,29 +8,51 @@ import { NavLink } from 'react-router-dom';
 import { getAccountsTC, requestAccounts } from '../redux/AccountsReducer';
 import AccountInfo from './AccountInfo';
 import './styles/Accounts.css'
+import dote from '../img/dote.png'
 
 const Accounts = (props) => {
   const dispatch = useDispatch();
+  const accountsData = useSelector(state => state.AccountsReducer.accounts)
+
   useEffect(() => {
     dispatch(getAccountsTC())
   }, [])
-  const [accountItem, setAccountItem] = useState({});
-  const accountsData = useSelector(state => state.AccountsReducer.accounts)
+
+  const [selectedAccount, setAccountItem] = useState({});
 
   return (<div className='AccountsWrapper'>
     <div className='accountsTitle'>Your accounts</div>
 
     <div className="d-flex">
       <div className='accountsList'>
+      {/* <div className={selectedAccount === item ? 'selected' : 'AccountCard'} key={item.uniqueId} onClick={() => setAccountItem(item)}> */}
         {
           accountsData.map((item, index) => {
-            return <div className='AccountCard' key={item.uniqueId} onClick={() => setAccountItem(item)}>
-              <div className="CardBody">
-                <div className="title">{item.title}</div>
-                <div className="currency">
-                  {`${item.currency} ${item.balance}`}
-                </div>
-              </div>
+            return <div>
+              {
+                selectedAccount === item
+                  ? <section id='selected' className="d-flex align-items-center mb-2">
+                      <div><img src={dote}/></div>
+                      
+                      <div className="CardBody selected" >
+                        <div className="title">{item.title}</div>
+                        <div className="currency">
+                          {`${item.currency} ${item.balance}`}
+                        </div>
+                      </div>
+                  </section>
+
+                  : <section className='mb-2'>
+                      <div>
+                        <div className="CardBody AccountCard" onClick={() => setAccountItem(item)}>
+                          <div className="title">{item.title}</div>
+                          <div className="currency">
+                            {`${item.currency} ${item.balance}`}
+                          </div>
+                        </div>
+                      </div>
+                  </section>
+              }
             </div>
           })
         }
@@ -42,8 +64,8 @@ const Accounts = (props) => {
       </div>
       <div className="accountLayer">
         {
-          accountItem &&
-          <AccountInfo accountItem={accountItem} />
+          selectedAccount &&
+          <AccountInfo selectedAccount={selectedAccount} />
         }
       </div>
     </div>

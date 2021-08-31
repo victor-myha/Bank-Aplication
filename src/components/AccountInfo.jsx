@@ -4,11 +4,11 @@ import { NavLink } from 'react-router-dom';
 import styles from './styles/AccountsInfo.module.css'
 
 const AccountInfo = (props) => {
-    console.log('Account Info',props.accountItem)
+    console.log('Account Info',props.selectedAccount)
     return(<div className={styles.AccountsInfoWrapper}>
         
-        { props.accountItem && 
-           props.accountItem.title
+        { props.selectedAccount && 
+           props.selectedAccount.title
         }
         <NavLink to='/sendMoney'><Button variant="outline-danger">Send Money</Button></NavLink>
     </div>)
