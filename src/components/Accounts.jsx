@@ -8,7 +8,11 @@ import { NavLink } from 'react-router-dom';
 import { getAccountsTC, requestAccounts } from '../redux/AccountsReducer';
 import AccountInfo from './AccountInfo';
 import './styles/Accounts.css'
+import eur from '../img/eur.png'
 import dote from '../img/dote.png'
+import gbp from '../img/gbp.png'
+import usd from '../img/usd.png'
+import krw from '../img/krw.png'
 
 const Accounts = (props) => {
   const dispatch = useDispatch();
@@ -31,21 +35,27 @@ const Accounts = (props) => {
             return <div>
               {
                 selectedAccount === item
-                  ? <section id='selected' className="d-flex align-items-center mb-2">
-                      <div><img src={dote}/></div>
+                  ? <section id='selected' className="d-flex align-items-center mb-4">
+                      <div className="dote"><img src={dote}/></div>
                       
-                      <div className="CardBody selected" >
-                        <div className="title">{item.title}</div>
-                        <div className="currency">
+                      <div className="CardBody AccountCard selected" >
+                        <div className='d-flex align-items-center AccountItemTitle'>
+                            <img src={require('../img/'+ item.currency + '.png').default} />
+                            {item.title}
+                          </div>
+                        <div >
                           {`${item.currency} ${item.balance}`}
                         </div>
                       </div>
                   </section>
 
-                  : <section className='mb-2'>
+                  : <section className='mb-4'>
                       <div>
-                        <div className="CardBody AccountCard" onClick={() => setAccountItem(item)}>
-                          <div className="title">{item.title}</div>
+                        <div className="CardBody AccountCard align-items-center" onClick={() => setAccountItem(item)}>
+                          <div className='d-flex align-items-center'>
+                            <img src={require('../img/'+ item.currency + '.png').default} />
+                            {item.title}
+                          </div>
                           <div className="currency">
                             {`${item.currency} ${item.balance}`}
                           </div>

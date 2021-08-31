@@ -11,7 +11,7 @@
 .NavbarWrapper a{
     text-decoration: none;
     font-size: 16px;
-    
+    color:#262626;
     letter-spacing: 0.37px;
 }
 .NavbarWrapper a:hover{
@@ -41,7 +41,6 @@
 }
 .Active{
     color: #FD3A6C;
-   
 }
 .Active img{
     /* background-color:red ; */
