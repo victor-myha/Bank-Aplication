@@ -5,7 +5,12 @@
     flex-direction: column;
     display: flex;
 }
-
+.AccountsInfoLayer{
+    margin-top: 50px;
+}
+.myHalf{
+    width: 50%;
+}
 .accountsTitle {
     font-style: normal;
     font-weight: bold;

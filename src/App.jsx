@@ -24,9 +24,6 @@ const  App = () => {
             <div className="accountsLayout">
               <Accounts />
             </div>
-            <div className="AccountInfoLayout">
-              {/* <AccountInfo /> */}
-            </div>
           </div>
         )
       }}/>

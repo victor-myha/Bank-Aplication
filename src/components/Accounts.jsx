@@ -8,11 +8,7 @@ import { NavLink } from 'react-router-dom';
 import { getAccountsTC, requestAccounts } from '../redux/AccountsReducer';
 import AccountInfo from './AccountInfo';
 import './styles/Accounts.css'
-import eur from '../img/eur.png'
 import dote from '../img/dote.png'
-import gbp from '../img/gbp.png'
-import usd from '../img/usd.png'
-import krw from '../img/krw.png'
 
 const Accounts = (props) => {
   const dispatch = useDispatch();
@@ -25,10 +21,11 @@ const Accounts = (props) => {
   const [selectedAccount, setAccountItem] = useState({});
 
   return (<div className='AccountsWrapper'>
-    <div className='accountsTitle'>Your accounts</div>
+    
 
-    <div className="d-flex">
-      <div>
+    <div className="d-flex ">
+      <div className='myHalf'>
+      <div className='accountsTitle'>Your accounts</div>
         {
           accountsData.map((item, index) => {
             return <div className='accountsList'>
@@ -39,7 +36,7 @@ const Accounts = (props) => {
                       
                       <div className="CardBody AccountCard selected" >
                         <div className='d-flex align-items-center AccountItemTitle'>
-                            <img src={require('../img/'+ item.currency + '.png').default} />
+                            <img src={require(`../img/${item.currency}.png`).default} />
                             {item.title}
                           </div>
                         <div >
@@ -92,7 +89,7 @@ const Accounts = (props) => {
         </section>
 
       </div>
-      <div className="accountLayer">
+      <div className="myHalf AccountsInfoLayer">
         {
           selectedAccount &&
           <AccountInfo selectedAccount={selectedAccount} />
