@@ -1,17 +1,34 @@
 import React from 'react';
-import { Button, Card, InputGroup, ListGroup } from 'react-bootstrap';
+import { Button} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './styles/AccountsInfo.css'
 
-
 const AccountInfo = (props) => {
+    const currency = [ 
+        {meaning:'eur', symbols: '€'},
+        {meaning:'gbp', symbols: '£'},
+        {meaning:'usd', symbols: '$'},
+        {meaning:'krw', symbols: '₩'} 
+    ]
 
     return (<div className='AccountsInfoWrapper'>
         <div className="infoContainer">
             <p className='infoTitle text-muted '>Balance</p>
 
             <div className="d-flex justify-content-between align-items-center">
-                <p className='info-currency'>{props.selectedAccount.currency}{props.selectedAccount.balance}</p>
+                <p className='info-currency'>
+                    {
+                        currency.map((c)=>{
+                            console.log('Dyp',props.selectedAccount.currency,c.meaning);
+                            return <div>
+                                {props.selectedAccount.currency === c.meaning
+                                ? <div>{currency.symbols}</div>
+                                : null}
+                            </div>
+                        })
+                    }
+                    {props.selectedAccount.balance}
+                </p>
                 <NavLink to='/topUp'><Button variant="outline-danger" className='topUpBtn'><img className='me-2' src={require('../img/topUpActive.svg').default} width='28px' />Top Up</Button></NavLink>
             </div>
 
