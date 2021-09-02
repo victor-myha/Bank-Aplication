@@ -7,8 +7,15 @@ let initialState = {
       currency: 'eur',
       balance: 133.2
     }
+  ],
+  currency: [ 
+    {meaning:'eur', symbols: '€'},
+    {meaning:'gbp', symbols: '£'},
+    {meaning:'usd', symbols: '$'},
+    {meaning:'krw', symbols: '₩'}
   ]
 }
+
 const AccountsReducer = (state = initialState,action) => {
 
   switch (action.type) {
@@ -28,7 +35,6 @@ const getAccountsAC = (accountsData) => ({type: 'GET-ACCOUNTS', accountsData})
 export const getAccountsTC = () => {
   return async (dispatch) => {
     let accountsData = await getAccounts();
-    console.log('Reducer', accountsData);
     
     dispatch(getAccountsAC(accountsData))
   }

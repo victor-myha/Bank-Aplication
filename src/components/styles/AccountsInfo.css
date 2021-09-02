@@ -38,6 +38,10 @@
     background-color: #fdabc0 !important;
 }
 
+.sendMoneyLink {
+    text-decoration: none !important;
+}
+
 .sendMoneyBtn {
     border-color: #FD3A6C !important;
     border-radius: 20px !important;
@@ -45,11 +49,11 @@
     height: auto;
     padding-top: 35px !important;
     padding-bottom: 22px !important;
-
 }
 
 .sendMoneyBtn:hover {
     background-color: #fdabc0 !important;
+    text-decoration: none !important;
 }
 
 .info-currency {

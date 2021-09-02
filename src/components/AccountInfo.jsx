@@ -1,33 +1,27 @@
 import React from 'react';
 import { Button} from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import './styles/AccountsInfo.css'
+import './styles/AccountsInfo.css';
 
 const AccountInfo = (props) => {
-    const currency = [ 
-        {meaning:'eur', symbols: '€'},
-        {meaning:'gbp', symbols: '£'},
-        {meaning:'usd', symbols: '$'},
-        {meaning:'krw', symbols: '₩'} 
-    ]
-
+    const currency = useSelector(state => state.AccountsReducer.currency)
     return (<div className='AccountsInfoWrapper'>
-        <div className="infoContainer">
+        <div className="infoContainer"> 
             <p className='infoTitle text-muted '>Balance</p>
 
             <div className="d-flex justify-content-between align-items-center">
                 <p className='info-currency'>
                     {
                         currency.map((c)=>{
-                            console.log('Dyp',props.selectedAccount.currency,c.meaning);
                             return <div>
                                 {props.selectedAccount.currency === c.meaning
-                                ? <div>{currency.symbols}</div>
+                                ? <div>{c.symbols } {props.selectedAccount.balance}</div>
                                 : null}
                             </div>
                         })
                     }
-                    {props.selectedAccount.balance}
+                    
                 </p>
                 <NavLink to='/topUp'><Button variant="outline-danger" className='topUpBtn'><img className='me-2' src={require('../img/topUpActive.svg').default} width='28px' />Top Up</Button></NavLink>
             </div>
@@ -36,7 +30,12 @@ const AccountInfo = (props) => {
 
             <div className="transactionTo d-flex justify-content-between">
                 <div>
-                    <NavLink to='/sendMoney'><Button variant="outline-danger" className='sendMoneyBtn d-flex flex-column align-items-center'><img className='mb-3' src={require('../img/sendMoney.svg').default} width='28px' />Send <br /> Money</Button></NavLink>
+                    <NavLink to='/sendMoney' className='sendMoneyLink'>
+                        <Button variant="outline-danger" className='sendMoneyBtn d-flex flex-column align-items-center'>
+                            <img className='mb-3' src={require('../img/sendMoney.svg').default} width='28px' />
+                            {`Send \n Money`}
+                        </Button>
+                    </NavLink>
                 </div>
                 <div>
                     <Button variant="outline-danger" className='peopleBtn d-flex flex-column align-items-center'><img className='mb-3' src={require('../img/leo.svg').default} width='70px' />Leo W.</Button>

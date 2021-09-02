@@ -8,7 +8,6 @@ import { useState } from 'react';
 const Navbar = (props) => {
     const [selected, setSelected] = useState({})
 
-    console.log('1', selected)
     const [navData, setNavData] = useState([
         { title: 'Home', link: '/home' },
         { title: 'Send Money', link: '/sendMoney' },
@@ -16,7 +15,6 @@ const Navbar = (props) => {
         { title: 'Accounts', link: '/accounts' }
     ]);
 
-    console.log('2', selected)
     return (
         <div className='NavbarWrapper'>
             <div>
@@ -28,8 +26,7 @@ const Navbar = (props) => {
                             navData.map((nav, index) => {
                                 return  (<div onClick={() => setSelected(nav)}>
                                     <Nav.Item className='navItem' >
-                                        <NavLink to={nav.link}>
-                                            {
+                                        <NavLink to={nav.link}> {
                                             selected === nav
                                             ? <div className='d-flex'>
                                                 <div><img width='5px' height='5px' src={require('../img/dote.png').default} /></div>
@@ -40,10 +37,10 @@ const Navbar = (props) => {
                                                 <div><img src={require('../img' + nav.link + '.png').default} /></div>
                                                 <div className='Disabled'>{nav.title}</div>
                                             </div>
-                                    }
-                                </NavLink>
-                            </Nav.Item>
-                        </div>)
+                                        }
+                                        </NavLink>
+                                    </Nav.Item>
+                                </div>)
                             })
                         }
                     </div>
