@@ -1,67 +1,30 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Card } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { NavLink } from 'react-router-dom';
 import { getAccountsTC, requestAccounts } from '../redux/AccountsReducer';
 import AccountInfo from './AccountInfo';
 import './styles/Accounts.css'
 import dote from '../img/dote.png'
+import AccountsList from './AccountsList';
 
 const Accounts = (props) => {
   const dispatch = useDispatch();
-  const accountsData = useSelector(state => state.AccountsReducer.accounts)
-
+  // const accountsData = useSelector(state => state.AccountsReducer.accounts)
+  const [selectedAccount, setAccountItem] = useState(null);
   useEffect(() => {
     dispatch(getAccountsTC())
   }, [])
-
-  const [selectedAccount, setAccountItem] = useState({});
 
   return (<div className='AccountsWrapper'>
     
 
     <div className="d-flex ">
       <div className='myHalf'>
-      <div className='accountsTitle'>Your accounts</div>
-        {
-          accountsData.map((item, index) => {
-            return <div className='accountsList'>
-              {
-                selectedAccount === item
-                  ? <section id='selected' className="d-flex align-items-center mb-4">
-                      <div className="dote"><img src={dote}/></div>
-                      
-                      <div className="CardBody AccountCard selected" >
-                        <div className='d-flex align-items-center AccountItemTitle'>
-                            <img src={require(`../img/${item.currency}.png`).default} />
-                            {item.title}
-                          </div>
-                        <div >
-                          {`${item.currency} ${item.balance}`}
-                        </div>
-                      </div>
-                  </section>
-
-                  : <section className='mb-4'>
-                      <div>
-                        <div className="CardBody AccountCard align-items-center" onClick={() => setAccountItem(item)}>
-                          <div className='d-flex align-items-center'>
-                            <img src={require('../img/'+ item.currency + '.png').default} />
-                            {item.title}
-                          </div>
-                          <div className="currency">
-                            {`${item.currency} ${item.balance}`}
-                          </div>
-                        </div>
-                      </div>
-                  </section>
-              }
-            </div>
-          })
-        }
+        <div className='accountsTitle'>Your accounts</div>
+          <AccountsList selectedAccount={selectedAccount} setAccountItem={setAccountItem}/>
+        
         <section className='footerWrapper'>
           <div className='footerContent'>
               <div className='d-flex align-items-center'>
@@ -91,8 +54,9 @@ const Accounts = (props) => {
       </div>
       <div className="myHalf AccountsInfoLayer">
         {
-          selectedAccount &&
-          <AccountInfo selectedAccount={selectedAccount} />
+          selectedAccount === null
+          ? <div className='SendMoneyInfo'></div>
+          : <AccountInfo selectedAccount={selectedAccount} />
         }
       </div>
     </div>

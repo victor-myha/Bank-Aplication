@@ -86,3 +86,12 @@
 .rightArrow:hover{
 cursor: pointer;
 }
+.SendMoneyInfo {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(168, 236, 113);
+    background: #FFFFFF;
+    border-radius: 40px 0px 0px 0px;
+    font-family: 'Poppins', sans-serif;
+}

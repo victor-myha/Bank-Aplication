@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.SendMoneyWrapper {
+    width: 85%;
+    /* background-color: rgb(151, 44, 238); */
+}
+
+.sendMoneyTitle {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.37px;
+    margin-top: 49.65px;
+    margin-bottom: 20.35px;
+    margin-left: 33px;
+}
+
+.sendMoneyTitle {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.374px;
+    color: #262626;
+}
+.w50{
+    width: 50%;
+}

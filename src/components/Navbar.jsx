@@ -36,29 +36,24 @@ const Navbar = (props) => {
                                         <NavLink  to={nav.link}>
                                             {
                                                 nav.active === true 
-                                                ? <img src={require('../img'+ nav.link +'Active'+ '.png').default} />
-                                                : <img src={require('../img'+ nav.link +'.png').default} />
+                                                ? <div className='d-flex'>
+                                                    <div><img src={require('../img/dote.png').default} /></div>
+                                                    <div><img src={require('../img'+ nav.link +'Active'+ '.png').default} /></div>
+                                                    <div className='Active'>{nav.title}</div>
+                                                </div>
+                                                : <div className='d-flex'>
+                                                    <img src={require('../img'+ nav.link +'.png').default} />
+                                                    <div className='Disabled'>{nav.title}</div>
+                                                </div>
                                             }
                                             
-                                             {nav.title}
+                                             
                                         </NavLink>
                                     </Nav.Item>
                                 )
                             })
                         }
                     </div>
-                    {/* <Nav.Item className='navItem'>
-                        <NavLink activeClassName='Active' to={`/home`}><img src={navHomeSelected}/> Home</NavLink>
-                    </Nav.Item>
-                    <Nav.Item className='navItem'>
-                        <NavLink activeClassName='Active' to={`/sendMoney`}><img src={navSendMoney}/> Send Money</NavLink>
-                    </Nav.Item>
-                    <Nav.Item className='navItem'>
-                        <NavLink activeClassName='Active' to={`/topUp`}><img src={navTopUp}/> Top Up</NavLink>
-                    </Nav.Item>
-                    <Nav.Item className='navItem'>
-                        <NavLink activeClassName='Active'  to={`/accounts`}><img src={navAccounts}/> Accounts</NavLink>
-                    </Nav.Item> */}
                 </Nav>
             </div>
             <div className="d-flex navProfileWrap">

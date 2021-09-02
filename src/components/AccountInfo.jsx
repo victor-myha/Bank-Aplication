@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Card, ListGroup } from 'react-bootstrap';
+import { Button, Card, InputGroup, ListGroup } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './styles/AccountsInfo.css'
+
 
 const AccountInfo = (props) => {
 
@@ -28,14 +29,57 @@ const AccountInfo = (props) => {
                 </div>
             </div>
 
-            <div>
-                <Card style={{ width: '18rem' }} className='infoCard mt-4'>
-                    <ListGroup variant="flush">
-                        <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                    </ListGroup>
-                </Card>
+            <div className='infoCard mt-4'>
+                <div className="cardBody">
+                    <div className='d-flex mt-3 justify-content-between align-items-center'>
+                        <div className='text-muted acType'>
+                            <input className='me-2' type="checkbox" checked/>
+                            Accounts Type                            
+                        </div>
+                        <div>
+                            Personal
+                        </div>
+                    </div>
+                   
+                    <hr  />
+                    
+                    <div className='d-flex mt-3 mb-3 justify-content-between align-items-center'>
+                        <div className='text-muted acType'>
+                        <img className='me-2' src={require('../img/coins.svg').default} />
+                            Currency                            
+                        </div>
+                        <div>
+                            Euro EUR
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='infoCard mt-4'>
+                <div className="cardBody">
+                    <div className='d-flex mt-3 justify-content-between align-items-center'>
+                        <div className='text-muted acType'>
+                        <img className='me-2' src={require('../img/piggy.svg').default} />
+                            Passive Saving                            
+                        </div>
+                        <div>
+                            Enabled 20%
+                        </div>
+                    </div>
+                   
+                    <hr  />
+                    
+                    <div className='d-flex mt-3 mb-3 justify-content-between align-items-center'>
+                        <div className='text-muted acType'>
+                            Share Account                            
+                        </div>
+                        <div>
+                        <img className='me-2' src={require('../img/p1.svg').default} />
+                        <img className='me-2' src={require('../img/p2.svg').default} />
+                        <img className='me-2' src={require('../img/p3.svg').default} />
+                        <img className='me-2' src={require('../img/p+2.svg').default} />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
