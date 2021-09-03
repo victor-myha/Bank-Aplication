@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Bank-Aplication/static/css/main.7824c992.chunk.css",
-    "main.js": "/Bank-Aplication/static/js/main.589662f0.chunk.js",
-    "main.js.map": "/Bank-Aplication/static/js/main.589662f0.chunk.js.map",
+    "main.css": "/Bank-Aplication/static/css/main.4a65efc1.chunk.css",
+    "main.js": "/Bank-Aplication/static/js/main.1d5f3e61.chunk.js",
+    "main.js.map": "/Bank-Aplication/static/js/main.1d5f3e61.chunk.js.map",
     "runtime-main.js": "/Bank-Aplication/static/js/runtime-main.7b6754f0.js",
     "runtime-main.js.map": "/Bank-Aplication/static/js/runtime-main.7b6754f0.js.map",
     "static/css/2.818011ed.chunk.css": "/Bank-Aplication/static/css/2.818011ed.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.c1bb1c4b.chunk.js.map": "/Bank-Aplication/static/js/3.c1bb1c4b.chunk.js.map",
     "index.html": "/Bank-Aplication/index.html",
     "static/css/2.818011ed.chunk.css.map": "/Bank-Aplication/static/css/2.818011ed.chunk.css.map",
-    "static/css/main.7824c992.chunk.css.map": "/Bank-Aplication/static/css/main.7824c992.chunk.css.map",
+    "static/css/main.4a65efc1.chunk.css.map": "/Bank-Aplication/static/css/main.4a65efc1.chunk.css.map",
     "static/js/2.32420ac2.chunk.js.LICENSE.txt": "/Bank-Aplication/static/js/2.32420ac2.chunk.js.LICENSE.txt",
     "static/media/CardRequest.svg": "/Bank-Aplication/static/media/CardRequest.440cd064.svg",
     "static/media/coins.svg": "/Bank-Aplication/static/media/coins.8aeb77fb.svg",
@@ -30,7 +30,7 @@
     "static/js/runtime-main.7b6754f0.js",
     "static/css/2.818011ed.chunk.css",
     "static/js/2.32420ac2.chunk.js",
-    "static/css/main.7824c992.chunk.css",
-    "static/js/main.589662f0.chunk.js"
+    "static/css/main.4a65efc1.chunk.css",
+    "static/js/main.1d5f3e61.chunk.js"
   ]
 }
