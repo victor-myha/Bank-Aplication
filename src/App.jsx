@@ -1,6 +1,5 @@
 import React from 'react';
 import Accounts from './components/Accounts';
-import AccountInfo from './components/AccountInfo';
 import Navbar from './components/Navbar';
 import { Redirect, Route } from 'react-router-dom';
 import SendMoney from './components/SendMoney';
@@ -35,6 +34,32 @@ const  App = () => {
               <Navbar />
             </div>
             <SendMoney/>
+          </div>
+        )
+      }}/>
+
+      <Route path="/topUp" render={(routeProps) => {
+        return (
+          <div className="appLayout">
+            <div className="navbarLayout">
+              <Navbar />
+            </div>
+            <div>
+                Top Up Page
+            </div>
+          </div>
+        )
+      }}/>
+
+      <Route path="/accounts" render={(routeProps) => {
+        return (
+          <div className="appLayout">
+            <div className="navbarLayout">
+              <Navbar />
+            </div>
+              <div>
+                  Accounts
+              </div>
           </div>
         )
       }}/>

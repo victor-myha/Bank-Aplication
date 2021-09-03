@@ -26,7 +26,7 @@ const AccountInfo = (props) => {
                 <NavLink to='/topUp'><Button variant="outline-danger" className='topUpBtn'><img className='me-2' src={require('../img/topUpActive.svg').default} width='28px' />Top Up</Button></NavLink>
             </div>
 
-            <p className='infoTitle text-muted '>Quick Transaction</p>
+            <p className='mt-3 mb-4 text-muted '>Quick Transaction</p>
 
             <div className="transactionTo d-flex justify-content-between">
                 <div>
@@ -52,7 +52,7 @@ const AccountInfo = (props) => {
                             <input className='me-2' type="checkbox" checked/>
                             Accounts Type                            
                         </div>
-                        <div>
+                        <div className='blackText'>
                             Personal
                         </div>
                     </div>
@@ -64,7 +64,7 @@ const AccountInfo = (props) => {
                         <img className='me-2' src={require('../img/coins.svg').default} />
                             Currency                            
                         </div>
-                        <div>
+                        <div className='blackText'>
                             Euro EUR
                         </div>
                     </div>
@@ -77,7 +77,7 @@ const AccountInfo = (props) => {
                         <img className='me-2' src={require('../img/piggy.svg').default} />
                             Passive Saving                            
                         </div>
-                        <div>
+                        <div className='blackText'>
                             Enabled 20%
                         </div>
                     </div>

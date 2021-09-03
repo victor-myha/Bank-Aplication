@@ -6,15 +6,6 @@
     background-color: rgb(168, 236, 113);
     background: #FFFFFF;
     border-radius: 40px 0px 0px 0px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.infoContainer {
-    width: 90%;
-}
-
-.infoTitle {
-    margin-top: 33px;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -22,6 +13,25 @@
     line-height: 27px;
     letter-spacing: 0.374px;
     color: #B5B5B5;
+    padding-bottom: 50px;
+}
+
+.blackText {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.374px;
+    color: #262626;
+}
+
+.infoTitle{
+    margin-top: 33px;
+}
+
+.infoContainer {
+    width: 90%;
 }
 
 .transactionTo {
@@ -57,6 +67,8 @@
 }
 
 .info-currency {
+    font-family: Poppins;
+    font-style: normal;
     font-weight: bold;
     font-size: 64px;
     line-height: 96px;
@@ -92,14 +104,15 @@
     width: 90%;
 }
 
-.acType{
+.acType {
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.374px;
     color: #B5B5B5;
 }
-.label-text{
+
+.label-text {
     background-color: red;
     color: black;
 }

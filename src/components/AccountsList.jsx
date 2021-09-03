@@ -15,7 +15,7 @@ const AccountsList = (props) => {
   function CurrencyToSign (item) {
     return currency.map((c)=>{
       return item.currency === c.meaning
-        ? <div>{c.symbols } {item.balance}</div>
+        ? <div className='symbolsBalanceText'>{c.symbols } {item.balance}</div>
         : null
     })
   } 

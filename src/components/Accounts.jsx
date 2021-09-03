@@ -35,8 +35,8 @@ const Accounts = (props) => {
                 </div>
                 
                 <div>
-                  <h4>Request a card</h4>
-                  <h6 className='text-muted'>Get a debit card for free</h6>
+                  <div>Request a card</div>
+                  <div className='my-muted-text'>Get a debit card for free</div>
                 </div>
               </div>
               <div className='rightArrow'>
@@ -51,8 +51,8 @@ const Accounts = (props) => {
                 </div>
                 
                 <div>
-                  <h4>Request a card</h4>
-                  <h6 className='text-muted'>Get a debit card for free</h6>
+                  <div>Request a card</div>
+                  <div className='my-muted-text'>Get a debit card for free</div>
                 </div>
               </div>
               <div className='rightArrow'>
