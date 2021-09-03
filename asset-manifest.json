@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/Bank-Aplication/static/css/main.7824c992.chunk.css",
+    "main.js": "/Bank-Aplication/static/js/main.589662f0.chunk.js",
+    "main.js.map": "/Bank-Aplication/static/js/main.589662f0.chunk.js.map",
+    "runtime-main.js": "/Bank-Aplication/static/js/runtime-main.7b6754f0.js",
+    "runtime-main.js.map": "/Bank-Aplication/static/js/runtime-main.7b6754f0.js.map",
+    "static/css/2.818011ed.chunk.css": "/Bank-Aplication/static/css/2.818011ed.chunk.css",
+    "static/js/2.32420ac2.chunk.js": "/Bank-Aplication/static/js/2.32420ac2.chunk.js",
+    "static/js/2.32420ac2.chunk.js.map": "/Bank-Aplication/static/js/2.32420ac2.chunk.js.map",
+    "static/js/3.c1bb1c4b.chunk.js": "/Bank-Aplication/static/js/3.c1bb1c4b.chunk.js",
+    "static/js/3.c1bb1c4b.chunk.js.map": "/Bank-Aplication/static/js/3.c1bb1c4b.chunk.js.map",
+    "index.html": "/Bank-Aplication/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/Bank-Aplication/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.7824c992.chunk.css.map": "/Bank-Aplication/static/css/main.7824c992.chunk.css.map",
+    "static/js/2.32420ac2.chunk.js.LICENSE.txt": "/Bank-Aplication/static/js/2.32420ac2.chunk.js.LICENSE.txt",
+    "static/media/CardRequest.svg": "/Bank-Aplication/static/media/CardRequest.440cd064.svg",
+    "static/media/coins.svg": "/Bank-Aplication/static/media/coins.8aeb77fb.svg",
+    "static/media/leo.svg": "/Bank-Aplication/static/media/leo.4928ff9c.svg",
+    "static/media/monica.svg": "/Bank-Aplication/static/media/monica.2fef4b6b.svg",
+    "static/media/p+2.svg": "/Bank-Aplication/static/media/p+2.670b1363.svg",
+    "static/media/p1.svg": "/Bank-Aplication/static/media/p1.b469820f.svg",
+    "static/media/p2.svg": "/Bank-Aplication/static/media/p2.792b5c81.svg",
+    "static/media/p3.svg": "/Bank-Aplication/static/media/p3.6c04ef8a.svg",
+    "static/media/piggy.svg": "/Bank-Aplication/static/media/piggy.e7aac827.svg",
+    "static/media/sendMoney.svg": "/Bank-Aplication/static/media/sendMoney.c270ba88.svg",
+    "static/media/topUpActive.svg": "/Bank-Aplication/static/media/topUpActive.166f5225.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7b6754f0.js",
+    "static/css/2.818011ed.chunk.css",
+    "static/js/2.32420ac2.chunk.js",
+    "static/css/main.7824c992.chunk.css",
+    "static/js/main.589662f0.chunk.js"
+  ]
+}
